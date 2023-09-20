@@ -4,8 +4,8 @@ Test Template     Create character
 Library           CreateCharacterLibrary.py
 
 *** Test Cases ***      characterNameInput     characterNameOutput
-Provided name           Erin                   Erin
-Default name            ${EMPTY}               Character
+Provided name           bob                   Erin
+Default name            ${Character}               Character
 
 *** Keywords ***
 Create character
