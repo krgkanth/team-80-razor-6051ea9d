@@ -10,3 +10,10 @@ class Position:
     def __init__(self, x_coordinate : int, y_coordinate : int):
         self.x_coordinate = x_coordinate
         self.y_coordinate = y_coordinate
+
+    def __eq__(self, other): 
+        if not isinstance(other, Position):
+            # don't attempt to compare against unrelated types
+            return NotImplemented
+
+        return self.x_coordinate == other.x_coordinate and self.y_coordinate == other.y_coordinate
