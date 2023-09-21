@@ -28,11 +28,11 @@ class MoveLibrary:
         end_y = self.controller.status.current_position[1]
         assert end_y == expected, f"Expected: {expected}, Actual: {end_y}"
 
-        def character_yposition_should_be(self, expected):
+    def character_yposition_should_be(self, expected):
         end_y = self.controller.status.current_position[5]
         assert end_y == expected, f"Expected: {expected}, Actual: {end_y}"
 
-     def character_xposition_should_be(self, expected):
+    def character_xposition_should_be(self, expected):
         end_x = self.controller.status.current_position[6]
         assert end_x == expected, f"Expected: {expected}, Actual: {end_x}"
 
