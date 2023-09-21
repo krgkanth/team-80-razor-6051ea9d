@@ -13,8 +13,8 @@ class TestMap(TestCase):
 
     def test_init_creates_positions_with_correct_x_y(self):
         testobj = Map()
-        self.assertEqual(3, testobj.positions[3][0].x)
-        self.assertEqual(7, testobj.positions[3][7].y)
+        self.assertEqual(3, testobj.positions[3][0].x_coordinate)
+        self.assertEqual(7, testobj.positions[3][7].y_coordinate)
 
     def test_is_position_valid_when_true(self):
         testobj = Map()
@@ -26,7 +26,7 @@ class TestMap(TestCase):
 
     def test_is_position_valid_when_x_too_big(self):
         testobj = Map()
-        self.assertFalse(testobj.is_position_valid(Position(9, 4)))
+        self.assertFalse(testobj.is_position_valid(Position(10, 4)))
 
     def test_is_position_valid_when_y_too_small(self):
         testobj = Map()

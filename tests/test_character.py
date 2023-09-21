@@ -4,10 +4,13 @@ from tests.robot.fake_map import FakeMap
 from levelup.controller import Direction
 
 class TestCharacterInitWithName(TestCase):
+
+    ARBITRARY_NAME = "MyName"
+
     def test_init(self):
-        ARBITRARY_NAME = "MyName"
-        testobj = Character(ARBITRARY_NAME)
-        self.assertEqual(ARBITRARY_NAME, testobj.name)
+            
+        testobj = Character(self.ARBITRARY_NAME)
+        self.assertEqual(self.ARBITRARY_NAME, testobj.name)
 
     def test_enter_map_sets_map_and_updates_position(self):
 
@@ -24,5 +27,5 @@ class TestCharacterInitWithName(TestCase):
         
         testobj.move(Direction.EAST)
 
-        self.assertEqual(stubbed_map.STUBBED_X, testobj.current_position.x)
-        self.assertEqual(stubbed_map.STUBBED_Y, testobj.current_position.y)
+        self.assertEqual(stubbed_map.STUBBED_X, testobj.current_position.x_coordinate)
+        self.assertEqual(stubbed_map.STUBBED_Y, testobj.current_position.y_coordinate)
