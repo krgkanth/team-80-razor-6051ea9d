@@ -22,20 +22,20 @@ class Map ():
         self.positions = temp_pos
 
     def is_position_valid(self, position :Position):
-        if position.x >= 0 and position.x < self.size[0] and position.y >= 0 and position.y < self.size[1]:
+        if position.x_coordinate >= 0 and position.x_coordinate < self.size[0] and position.y_coordinate >= 0 and position.y_coordinate < self.size[1]:
             return True
         else:
             return False
 
     def calculate_new_position(self, current_position: Position, direction: Direction) -> Position:
         if direction == Direction.NORTH:
-            new_position = Position(current_position.x, current_position.y + 1)
+            new_position = Position(current_position.x_coordinate, current_position.y_coordinate + 1)
         elif direction == Direction.SOUTH:
-            new_position = Position(current_position.x, current_position.y - 1)
+            new_position = Position(current_position.x_coordinate, current_position.y_coordinate - 1)
         elif direction == Direction.EAST:
-            new_position = Position(current_position.x + 1, current_position.y)
+            new_position = Position(current_position.x_coordinate + 1, current_position.y_coordinate)
         elif direction == Direction.WEST:
-            new_position = Position(current_position.x - 1, current_position.y)
+            new_position = Position(current_position.x_coordinate - 1, current_position.y_coordinate)
         else:
             pass
         

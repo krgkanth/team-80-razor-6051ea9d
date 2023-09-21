@@ -66,9 +66,12 @@ class TestMap(TestCase):
     def test_calculate_new_position_when_valid_WEST(self):
         testobj = Map()
         startingPosition = Position(3, 3)
+        print (startingPosition)
         expectedPosition = Position(2, 3)
+        print (expectedPosition)
         actualPosition = testobj.calculate_new_position(
             startingPosition, Direction.WEST)
+        print(actualPosition)
         self.assertEqual(expectedPosition, actualPosition)
 
     def test_calculate_new_position_when_invalid_NORTH(self):
