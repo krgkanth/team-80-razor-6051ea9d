@@ -4,8 +4,25 @@ Test Template     Move character
 Library           MoveLibrary.py
 
 *** Test Cases ***                  StartingX     StartingY     StartingMoveCount     Direction     EndingX     EndingY     EndingMoveCount
-Move in the middle of the board     0             0             1                     NORTH         0           1           2
-Move on the edge of the board       0             0             5                     SOUTH         0           0           6
+#Move in the middle of the board     0             0             1                     NORTH         0           1           2
+#Move on the edge of the board       0             0             5                     SOUTH         0           0           6*** Test Cases ***                  StartingX     StartingY     StartingMoveCount     Direction     EndingX     EndingY     EndingMoveCount
+0,0 Moving NORTH                      0             0             1                     NORTH         0           1           2
+0,0 Moving SOUTH                      0             0             1                     SOUTH         0           0           2
+0,0 Moving EAST                       0             0             1                     EAST          1           0           2
+0,0 Moving WEST                       0             0             1                     WEST          0           0           2
+0,9 Moving NORTH                      0             9             1                     NORTH         0           9           2
+0,9 Moving SOUTH                      0             9             1                     SOUTH         0           8           2
+0,9 Moving EAST                       0             9             1                     EAST          1           9           2
+0,9 Moving WEST                       0             9             1                     WEST          0           9           2
+9,0 Moving NORTH                      9             0             1                     NORTH         9           1           2
+9,0 Moving SOUTH                      9             0             1                     SOUTH         9           0           2
+9,0 Moving EAST                       9             0             1                     EAST          9           0           2
+9,0 Moving WEST                       9             0             1                     WEST          8           0           2
+9,9 Moving NORTH                      9             9             1                     NORTH         9           9           2
+9,9 Moving SOUTH                      9             9             1                     SOUTH         9           8           2
+9,9 Moving EAST                       9             9             1                     EAST          9           9           2
+9,9 Moving WEST                       9             9             1                     WEST          8           9           2
+
 
 
 *** Keywords ***
