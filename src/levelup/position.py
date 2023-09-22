@@ -11,6 +11,14 @@ class Position:
         self.x_coordinate = x_coordinate
         self.y_coordinate = y_coordinate
 
+    def __getitem__(self, item):
+        if item == 0:
+            return self.x_coordinate
+        elif item == 1:
+            return self.y_coordinate
+        else:
+            raise Exception("Invalid tuple")
+
     def __eq__(self, other): 
         if not isinstance(other, Position):
             # don't attempt to compare against unrelated types
