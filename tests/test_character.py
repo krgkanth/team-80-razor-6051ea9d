@@ -1,6 +1,7 @@
 from unittest import TestCase
 from levelup.character import Character
-from tests.robot.fake_map import FakeMap
+#from tests.robot.fake_map import FakeMap
+from tests.fake_map import FakeMap
 from levelup.controller import Direction
 
 class TestCharacterInitWithName(TestCase):
