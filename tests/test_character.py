@@ -25,6 +25,7 @@ class TestCharacterInitWithName(TestCase):
         stubbed_map = FakeMap()
         testobj.map = stubbed_map
         
+        
         testobj.move(Direction.EAST)
 
         self.assertEqual(stubbed_map.STUBBED_X, testobj.current_position.x_coordinate)
